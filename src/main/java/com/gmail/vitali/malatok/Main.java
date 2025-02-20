@@ -10,6 +10,8 @@ public class Main {
         printColor();
         //task_4
         compareNumbers();
+        //task_5
+        System.out.println(isSumNumber(10, 5));
     }
 
     //task_1
@@ -47,10 +49,20 @@ public class Main {
     private static void compareNumbers() {
         int a = 1;
         int b = -1;
-        if(a >= b) {
+        if (a >= b) {
             System.out.println("a >= b");
         } else {
             System.out.println("a < b");
+        }
+    }
+
+    //task_5
+    private static boolean isSumNumber(int firstNumber, int secondNumber) {
+        int result = firstNumber + secondNumber;
+        if (result >= 10 && result <= 20) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
