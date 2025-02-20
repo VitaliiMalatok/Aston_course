@@ -12,6 +12,8 @@ public class Main {
         compareNumbers();
         //task_5
         System.out.println(isSumNumber(10, 5));
+        //task_6
+        compareOfNumber(-5);
     }
 
     //task_1
@@ -63,6 +65,15 @@ public class Main {
             return true;
         } else {
             return false;
+        }
+    }
+
+    //task_6
+    private static void compareOfNumber(int firstNumber) {
+        if (firstNumber >= 0) {
+            System.out.println( firstNumber + " число положительное");
+        } else {
+            System.out.println( firstNumber + " число отрицательное");
         }
     }
 }
