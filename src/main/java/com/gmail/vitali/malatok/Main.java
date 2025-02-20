@@ -14,6 +14,8 @@ public class Main {
         System.out.println(isSumNumber(10, 5));
         //task_6
         compareOfNumber(-5);
+        //task_7
+        System.out.println(isCompareOfNumber(0));
     }
 
     //task_1
@@ -74,6 +76,15 @@ public class Main {
             System.out.println( firstNumber + " число положительное");
         } else {
             System.out.println( firstNumber + " число отрицательное");
+        }
+    }
+
+    //task_7
+    private static boolean isCompareOfNumber(int firstNumber) {
+        if (firstNumber < 0) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
