@@ -8,6 +8,8 @@ public class Main {
         checkSumSign();
         //task_3
         printColor();
+        //task_4
+        compareNumbers();
     }
 
     //task_1
@@ -38,6 +40,17 @@ public class Main {
             System.out.println("Жёлтый");
         } else {
             System.out.println("Зелёный");
+        }
+    }
+
+    //task_4
+    private static void compareNumbers() {
+        int a = 1;
+        int b = -1;
+        if(a >= b) {
+            System.out.println("a >= b");
+        } else {
+            System.out.println("a < b");
         }
     }
 }
