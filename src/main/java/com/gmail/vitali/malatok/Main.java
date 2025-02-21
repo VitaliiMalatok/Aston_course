@@ -1,5 +1,7 @@
 package com.gmail.vitali.malatok;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         //task_1
@@ -20,6 +22,8 @@ public class Main {
         printOfString(3, "Hello Aston_course");
         //task_9
         printOfYears();
+        //task_10
+        printArray();
     }
 
     //task_1
@@ -77,9 +81,9 @@ public class Main {
     //task_6
     private static void compareOfNumber(int firstNumber) {
         if (firstNumber >= 0) {
-            System.out.println( firstNumber + " число положительное");
+            System.out.println(firstNumber + " число положительное");
         } else {
-            System.out.println( firstNumber + " число отрицательное");
+            System.out.println(firstNumber + " число отрицательное");
         }
     }
 
@@ -115,11 +119,25 @@ public class Main {
     }
 
     private static void printOfYears() {
-        if(isYearsOfLeap() == true) {
+        if (isYearsOfLeap() == true) {
             System.out.println(" - this year is a leap year");
         } else {
             System.out.println(" - this year is a non leap year");
         }
     }
 
+    //task_10
+    private static void printArray() {
+        int[] simpleArray = {1, 1, 1, 1, 1, 0, 0, 0, 0, 0};
+        System.out.println("basic array " + Arrays.toString(simpleArray));
+        int counte = simpleArray.length;
+        for (int i = 0; i < counte; i++) {
+            if (simpleArray[i] == 0) {
+                simpleArray[i] = 1;
+            } else {
+                simpleArray[i] = 0;
+            }
+        }
+        System.out.println("new array after change " + Arrays.toString(simpleArray));
+    }
 }
