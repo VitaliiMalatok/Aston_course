@@ -16,6 +16,8 @@ public class Main {
         compareOfNumber(-5);
         //task_7
         System.out.println(isCompareOfNumber(0));
+        //task_8
+        printOfString(3, "Hello Aston_course");
     }
 
     //task_1
@@ -85,6 +87,13 @@ public class Main {
             return true;
         } else {
             return false;
+        }
+    }
+
+    //task_8
+    private static void printOfString(int quantity, String basicString) {
+        for (int i = 0; i < quantity; i++) {
+            System.out.println(basicString);
         }
     }
 }
