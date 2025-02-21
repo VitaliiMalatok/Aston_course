@@ -30,6 +30,8 @@ public class Main {
         modifyArray();
         //task_13
         createTwoDimensionalArray();
+        //task_14
+        System.out.println(Arrays.toString(createArray(5, 5)));
     }
 
     //task_1
@@ -182,5 +184,14 @@ public class Main {
             }
             System.out.println();
         }
+    }
+
+    //task_14
+    private static int[] createArray(int len, int initialValue) {
+        int[] basicArray = new int[len];
+        for (int i = 0; i < len; i++) {
+            basicArray[i] = initialValue;
+        }
+        return basicArray;
     }
 }
