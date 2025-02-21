@@ -28,6 +28,8 @@ public class Main {
         createArray();
         //task_12
         modifyArray();
+        //task_13
+        createTwoDimensionalArray();
     }
 
     //task_1
@@ -164,5 +166,21 @@ public class Main {
             }
         }
         System.out.println("array after modify: " + Arrays.toString(basicArray));
+    }
+
+    //task_13
+    private static void createTwoDimensionalArray() {
+        int n = 5;
+        int[][] table = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            table[i][i] = 1;
+            table[i][n - 1 - i] = 1;
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(table[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
