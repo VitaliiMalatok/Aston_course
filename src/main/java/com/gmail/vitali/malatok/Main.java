@@ -26,6 +26,8 @@ public class Main {
         printArray();
         //task_11
         createArray();
+        //task_12
+        modifyArray();
     }
 
     //task_1
@@ -149,6 +151,18 @@ public class Main {
         for (int i = 0; i < basicArray.length; i++) {
             basicArray[i] = i + 1;
         }
-        System.out.println(Arrays.toString(basicArray));
+        System.out.println("new array from 1 to 100 :" + Arrays.toString(basicArray));
+    }
+
+    //task_12
+    private static void modifyArray() {
+        int[] basicArray = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        System.out.println("basic array: " + Arrays.toString(basicArray));
+        for (int i = 0; i < basicArray.length; i++) {
+            if (basicArray[i] < 6) {
+                basicArray[i] *= 2; //
+            }
+        }
+        System.out.println("array after modify: " + Arrays.toString(basicArray));
     }
 }
