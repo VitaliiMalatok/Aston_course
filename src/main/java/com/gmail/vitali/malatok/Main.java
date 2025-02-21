@@ -24,6 +24,8 @@ public class Main {
         printOfYears();
         //task_10
         printArray();
+        //task_11
+        createArray();
     }
 
     //task_1
@@ -139,5 +141,14 @@ public class Main {
             }
         }
         System.out.println("new array after change " + Arrays.toString(simpleArray));
+    }
+
+    //task_11
+    private static void createArray() {
+        int[] basicArray = new int[100];
+        for (int i = 0; i < basicArray.length; i++) {
+            basicArray[i] = i + 1;
+        }
+        System.out.println(Arrays.toString(basicArray));
     }
 }
