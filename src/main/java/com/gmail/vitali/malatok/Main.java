@@ -18,6 +18,8 @@ public class Main {
         System.out.println(isCompareOfNumber(0));
         //task_8
         printOfString(3, "Hello Aston_course");
+        //task_9
+        printOfYears();
     }
 
     //task_1
@@ -96,4 +98,28 @@ public class Main {
             System.out.println(basicString);
         }
     }
+
+    //task_9
+    private static boolean isYearsOfLeap() {
+        int interYourYears = 2028;
+        System.out.print(interYourYears);
+        if (interYourYears % 400 == 0) {
+            return true;
+        } else if (interYourYears % 100 == 0) {
+            return false;
+        } else if (interYourYears % 4 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private static void printOfYears() {
+        if(isYearsOfLeap() == true) {
+            System.out.println(" - this year is a leap year");
+        } else {
+            System.out.println(" - this year is a non leap year");
+        }
+    }
+
 }
