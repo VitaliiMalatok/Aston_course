@@ -15,5 +15,18 @@ public class Main {
         for (Product product : basicArray) {
             System.out.println(product);;
         }
+        //task_3
+        Park park = new Park("Energylandia", "Zator, Poland");
+        Park.Attraction attraction1 = new Park.Attraction("Hyperion", "10:00 - 22:00", 50.00);
+        Park.Attraction attraction2 = new Park.Attraction("Zadra", "11:00 - 21:00", 45.00);
+        Park.Attraction attraction3 = new Park.Attraction("Mayan", "09:30 - 20:30", 35.00);
+        Park.Attraction attraction4 = new Park.Attraction("Formula", "10:30 - 22:30", 40.00);
+        Park.Attraction attraction5 = new Park.Attraction("Dragon Roller Coaster", "09:00 - 21:00", 30.00);
+        System.out.println(park);
+        System.out.println(attraction1);
+        System.out.println(attraction2);
+        System.out.println(attraction3);
+        System.out.println(attraction4);
+        System.out.println(attraction5);
     }
 }
