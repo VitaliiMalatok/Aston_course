@@ -3,12 +3,12 @@ package com.gmail.vitali.malatok;
 import java.util.Objects;
 
 public class Product {
-    public   String productName;
-    public   String prodactionDate;
-    public   String manufacturer;
-    public   String countryOfOrigin;
-    public   int price;
-    public   String reservationStatus;
+    private final String productName;
+    private final String prodactionDate;
+    private final String manufacturer;
+    private final String countryOfOrigin;
+    private final int price;
+    private final String reservationStatus;
 
     public Product(String productName, String prodactionDate, String manufacturer, String countryOfOrigin, int price, String reservationStatus) {
         this.productName = productName;
@@ -21,7 +21,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return  "Product{" +
+        return "Product{" +
                 "productName='" + productName + '\'' +
                 ", prodactionDate=" + prodactionDate +
                 ", manufacturer='" + manufacturer + '\'' +
