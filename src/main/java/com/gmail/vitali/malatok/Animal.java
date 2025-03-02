@@ -1,7 +1,7 @@
 package com.gmail.vitali.malatok;
 
 public class Animal {
-    private final String name;
+    protected final String name;
     private static int animalCount = 0;
 
     public Animal(String name) {
