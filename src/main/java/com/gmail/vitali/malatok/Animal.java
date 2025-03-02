@@ -2,7 +2,7 @@ package com.gmail.vitali.malatok;
 
 public class Animal {
     protected final String name;
-    private static int animalCount = 0;
+    static int animalCount = 0;
 
     public Animal(String name) {
         this.name = name;
