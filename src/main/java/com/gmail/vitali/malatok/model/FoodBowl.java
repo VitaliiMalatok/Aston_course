@@ -1,4 +1,4 @@
-package com.gmail.vitali.malatok;
+package com.gmail.vitali.malatok.model;
 
 public class FoodBowl {
     private int foodAmount;

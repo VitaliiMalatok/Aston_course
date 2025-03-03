@@ -1,4 +1,4 @@
-package com.gmail.vitali.malatok;
+package com.gmail.vitali.malatok.model;
 
 public class Dog extends Animal {
     private static int dogCount = 0;

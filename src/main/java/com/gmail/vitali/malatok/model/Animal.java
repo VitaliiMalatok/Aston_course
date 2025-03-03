@@ -1,8 +1,8 @@
-package com.gmail.vitali.malatok;
+package com.gmail.vitali.malatok.model;
 
 public class Animal {
     protected final String name;
-    static int animalCount = 0;
+    public static int animalCount = 0;
 
     public Animal(String name) {
         this.name = name;
