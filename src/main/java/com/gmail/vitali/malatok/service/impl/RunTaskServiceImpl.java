@@ -2,7 +2,6 @@ package com.gmail.vitali.malatok.service.impl;
 
 import com.gmail.vitali.malatok.service.ArrayProcessor;
 import com.gmail.vitali.malatok.service.RunTaskService;
-import com.gmail.vitali.malatok.service.impl.ArrayProcessorImpl;
 
 public class RunTaskServiceImpl implements RunTaskService {
     @Override
