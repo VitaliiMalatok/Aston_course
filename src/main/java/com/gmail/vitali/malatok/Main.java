@@ -1,7 +1,7 @@
 package com.gmail.vitali.malatok;
 
 import com.gmail.vitali.malatok.service.RunTaskService;
-import com.gmail.vitali.malatok.service.RunTaskServiceImpl;
+import com.gmail.vitali.malatok.service.impl.RunTaskServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
