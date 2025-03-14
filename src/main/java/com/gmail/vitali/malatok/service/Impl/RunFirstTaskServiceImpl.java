@@ -19,13 +19,17 @@ public class RunFirstTaskServiceImpl implements RunFirstTaskService {
         students.add(new Student("Charlie Werstom", "C1", 3, List.of(4, 5, 5)));
 
         System.out.println("Список студентов до удаления:");
-        printStudents(students);
+        printStudents(students, 1);
+        printStudents(students, 2);
+        printStudents(students, 3);
 
         removeLowPerformingStudents(students);
         promoteStudents(students);
 
         System.out.println("\nСписок студентов после удаления и перевода:");
-        printStudents(students);
-
+        printStudents(students, 1);
+        printStudents(students, 2);
+        printStudents(students, 3);
+        printStudents(students, 4);
     }
 }
