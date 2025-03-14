@@ -20,10 +20,10 @@ public class StudentManager {
         }
     }
 
-    public static void printStudents(List<Student> students, int course) {
+    public static void printStudents(List<Student> students) {
         for (Student student : students) {
-            if (student.course == course) {
-                System.out.println(student.name);
+            {
+                System.out.println(student);
             }
         }
     }

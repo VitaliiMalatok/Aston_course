@@ -22,5 +22,15 @@ public class Student {
         }
         return (double) sum / grades.size();
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", group='" + group + '\'' +
+                ", course=" + course +
+                ", grades=" + grades +
+                '}';
+    }
 }
 
