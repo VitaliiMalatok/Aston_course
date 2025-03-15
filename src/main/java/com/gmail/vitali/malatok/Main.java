@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         RunFirstTaskService runFirstTaskService = new RunFirstTaskServiceImpl();
         RunSecondTaskService runSecondTaskService = new RunSecondTaskServiceImpl();
-        //runFirstTaskService.runFirstTask();
-        runSecondTaskService.runSecondTask();
+        //runFirstTaskService.runFirstTask();  // Task_1
+        runSecondTaskService.runSecondTask();  // Task_2
     }
 }
