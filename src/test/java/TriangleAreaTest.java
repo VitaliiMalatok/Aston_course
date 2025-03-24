@@ -4,8 +4,6 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.assertEquals;
-
 public class TriangleAreaTest {
     private static final Logger LOGGER = LogManager.getLogger(TriangleAreaTest.class);
 
