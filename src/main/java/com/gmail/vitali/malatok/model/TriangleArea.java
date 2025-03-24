@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 public class TriangleArea {
     private static final Logger LOGGER = LogManager.getLogger(TriangleArea.class);
+
     public static double calculate(double a, double b, double c) {
         if (a <= 0 || b <= 0 || c <= 0) {
             LOGGER.error("Invalid input: a = {}, b = {}, c = {}", a, b, c);
