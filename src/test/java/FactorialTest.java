@@ -1,27 +1,26 @@
 import com.gmail.vitali.malatok.model.Factorial;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 
-import static com.gmail.vitali.malatok.model.Factorial.logger;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FactorialTest {
-    private static final Logger LOGGER = (Logger) LogManager.getLogger(FactorialTest.class);
+    private static final Logger LOGGER = LogManager.getLogger(FactorialTest.class);
 
     @Test
     void testFactorialOfZero() {
-        logger.info("Starting testFactorial");
+        LOGGER.info("Starting testFactorial");
         assertEquals(1, Factorial.calculate(0));
         assertEquals(120, Factorial.calculate(5));
-        logger.info("testFactorial passed");
+        LOGGER.info("testFactorial passed");
     }
 
     @Test
     void testFactorialOfNegativeNumber() {
-        logger.info("Starting testFactorialNegative");
+        LOGGER.info("Starting testFactorialNegative");
         assertThrows(IllegalArgumentException.class, () -> Factorial.calculate(-1));
-        logger.info("testFactorialNegative passed");
+        LOGGER.info("testFactorialNegative passed");
     }
 }
