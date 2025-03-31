@@ -1,4 +1,4 @@
-package org.example;
+package com.gmail.vitali.malatok.model;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
