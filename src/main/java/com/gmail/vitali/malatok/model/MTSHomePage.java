@@ -11,19 +11,22 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.time.Duration;
+import java.util.Map;
 
 public class MTSHomePage {
-    private final WebDriver driver;
+    private static WebDriver driver;
     private final WebDriverWait wait;
     private static final Logger LOGGER = LogManager.getLogger(MTSHomePage.class);
 
     private final By acceptCookiesButton = By.xpath("//button[contains(text(), 'Принять')]");
     private final By titleOnlinePayment = By.xpath("//h2[contains(text(),'Онлайн пополнение ')]");
-    private final By paymentLogoVisa = By.xpath("//img[@alt='Visa']");
-    private final By paymentLogoVisaVerified = By.xpath("//img[@alt='Verified By Visa']");
-    private final By paymentLogoMasterVerified = By.xpath("//img[@alt='MasterCard']");
-    private final By paymentLogoMasterSecureVerified = By.xpath("//img[@alt='MasterCard Secure Code']");
-    private final By paymentLogoBelCardVerified = By.xpath("//img[@alt='Белкарт']");
+    private static final Map<String, By> paymentLogos = Map.of(
+            "Visa", By.xpath("//img[@alt='Visa']"),
+            "Visa Verified", By.xpath("//img[@alt='Verified By Visa']"),
+            "MasterCard", By.xpath("//img[@alt='MasterCard']"),
+            "MasterCard Secure", By.xpath("//img[@alt='MasterCard Secure Code']"),
+            "BelCard", By.xpath("//img[@alt='Белкарт']")
+    );
     private final By inputPhone = By.id("connection-phone");
     private final By inputSum = By.id("connection-sum");
     private final By continueButton = By.xpath("//button[@class='button button__default ']");
@@ -53,34 +56,20 @@ public class MTSHomePage {
         return isDisplayed;
     }
 
-    public boolean isPaymentLogoDisplayed() {
-        boolean isDisplayed = driver.findElement(paymentLogoVisa).isDisplayed();
-        LOGGER.info("Visa payment logo displayed: " + isDisplayed);
+    public static boolean isPaymentLogoDisplayed(String logoName) {
+        By locator = paymentLogos.get(logoName);
+        if (locator == null) {
+            LOGGER.info("No locator found for: " + logoName);
+            return false;
+        }
+
+        boolean isDisplayed = driver.findElement(locator).isDisplayed();
+        LOGGER.info(logoName + " payment logo displayed: " + isDisplayed);
         return isDisplayed;
     }
 
-    public boolean isPaymentLogoVisaDisplayed() {
-        boolean isDisplayed = driver.findElement(paymentLogoVisaVerified).isDisplayed();
-        LOGGER.info("Visa verified payment logo displayed: " + isDisplayed);
-        return isDisplayed;
-    }
-
-    public boolean isPaymentLogoMasterDisplayed() {
-        boolean isDisplayed = driver.findElement(paymentLogoMasterVerified).isDisplayed();
-        LOGGER.info("Master card payment logo displayed: " + isDisplayed);
-        return isDisplayed;
-    }
-
-    public boolean isPaymentLogoMasterSecureDisplayed() {
-        boolean isDisplayed = driver.findElement(paymentLogoMasterSecureVerified).isDisplayed();
-        LOGGER.info("Master secure card payment logo displayed: " + isDisplayed);
-        return isDisplayed;
-    }
-
-    public boolean isPaymentLogoBelCardDisplayed() {
-        boolean isDisplayed = driver.findElement(paymentLogoBelCardVerified).isDisplayed();
-        LOGGER.info("Bel card payment logo displayed: " + isDisplayed);
-        return isDisplayed;
+    public Map<String, By> getPaymentLogos() {
+        return paymentLogos;
     }
 
     public void fillPaymentForm(String phone, String sum) {
