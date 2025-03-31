@@ -21,6 +21,10 @@ public class MTSOnlinePaymentTests extends BaseTest {
     @Test(priority = 2)
     public void testPaymentLogosPresence() {
         Assert.assertTrue(homePage.isPaymentLogoDisplayed(), "Payment logos are missing!");
+        Assert.assertTrue(homePage.isPaymentLogoVisaDisplayed(), "Payment logos are missing!");
+        Assert.assertTrue(homePage.isPaymentLogoMasterDisplayed(), "Payment logos are missing!");
+        Assert.assertTrue(homePage.isPaymentLogoMasterSecureDisplayed(), "Payment logos are missing!");
+        Assert.assertTrue(homePage.isPaymentLogoBelCardDisplayed(), "Payment logos are missing!");
     }
 
     @Test(priority = 3)

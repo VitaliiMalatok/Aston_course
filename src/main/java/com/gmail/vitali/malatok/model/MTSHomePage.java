@@ -20,6 +20,10 @@ public class MTSHomePage {
     private final By acceptCookiesButton = By.xpath("//button[contains(text(), 'Принять')]");
     private final By titleOnlinePayment = By.xpath("//h2[contains(text(),'Онлайн пополнение ')]");
     private final By paymentLogoVisa = By.xpath("//img[@alt='Visa']");
+    private final By paymentLogoVisaVerified = By.xpath("//img[@alt='Verified By Visa']");
+    private final By paymentLogoMasterVerified = By.xpath("//img[@alt='MasterCard']");
+    private final By paymentLogoMasterSecureVerified = By.xpath("//img[@alt='MasterCard Secure Code']");
+    private final By paymentLogoBelCardVerified = By.xpath("//img[@alt='Белкарт']");
     private final By inputPhone = By.id("connection-phone");
     private final By inputSum = By.id("connection-sum");
     private final By continueButton = By.xpath("//button[@class='button button__default ']");
@@ -52,6 +56,30 @@ public class MTSHomePage {
     public boolean isPaymentLogoDisplayed() {
         boolean isDisplayed = driver.findElement(paymentLogoVisa).isDisplayed();
         LOGGER.info("Visa payment logo displayed: " + isDisplayed);
+        return isDisplayed;
+    }
+
+    public boolean isPaymentLogoVisaDisplayed() {
+        boolean isDisplayed = driver.findElement(paymentLogoVisaVerified).isDisplayed();
+        LOGGER.info("Visa verified payment logo displayed: " + isDisplayed);
+        return isDisplayed;
+    }
+
+    public boolean isPaymentLogoMasterDisplayed() {
+        boolean isDisplayed = driver.findElement(paymentLogoMasterVerified).isDisplayed();
+        LOGGER.info("Master card payment logo displayed: " + isDisplayed);
+        return isDisplayed;
+    }
+
+    public boolean isPaymentLogoMasterSecureDisplayed() {
+        boolean isDisplayed = driver.findElement(paymentLogoMasterSecureVerified).isDisplayed();
+        LOGGER.info("Master secure card payment logo displayed: " + isDisplayed);
+        return isDisplayed;
+    }
+
+    public boolean isPaymentLogoBelCardDisplayed() {
+        boolean isDisplayed = driver.findElement(paymentLogoBelCardVerified).isDisplayed();
+        LOGGER.info("Bel card payment logo displayed: " + isDisplayed);
         return isDisplayed;
     }
 
