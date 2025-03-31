@@ -4,11 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.logging.Logger;
-
 public class MTSOnlinePaymentTests extends BaseTest {
     private MTSHomePage homePage;
-    private static final Logger logger = Logger.getLogger(MTSOnlinePaymentTests.class.getName());
 
     @BeforeMethod
     public void initializePageObjects() {
@@ -30,7 +27,6 @@ public class MTSOnlinePaymentTests extends BaseTest {
     public void testContinueButton() {
         String phone = ConfigReader.get("phone.number");
         String sum = ConfigReader.get("payment.amount");
-
         homePage.fillPaymentForm(phone, sum);
         Assert.assertTrue(homePage.closePaymentFrame(), "Failed to close payment frame!");
     }

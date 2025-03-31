@@ -13,6 +13,8 @@ import org.apache.logging.log4j.Logger;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
+    public static final String INCOGNITO = "--incognito";
+    public static final int TIMEOUT = 8;
     protected WebDriver driver;
     private static final Logger LOGGER = LogManager.getLogger(BaseTest.class);
 
@@ -20,10 +22,10 @@ public class BaseTest {
     public void setUp() {
         LOGGER.info("Setting up WebDriver...");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--incognito");
+        options.addArguments(INCOGNITO);
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
         String baseUrl = ConfigReader.get("base.url");
         driver.get(baseUrl);
         LOGGER.info("Navigated to: " + baseUrl);

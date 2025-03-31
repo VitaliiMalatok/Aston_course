@@ -13,21 +13,20 @@ import org.apache.logging.log4j.Logger;
 import java.time.Duration;
 
 public class MTSHomePage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
     private static final Logger LOGGER = LogManager.getLogger(MTSHomePage.class);
 
-    // Локаторы
-    private By acceptCookiesButton = By.xpath("//button[contains(text(), 'Принять')]");
-    private By titleOnlinePayment = By.xpath("//h2[contains(text(),'Онлайн пополнение ')]");
-    private By paymentLogoVisa = By.xpath("//img[@alt='Visa']");
-    private By inputPhone = By.id("connection-phone");
-    private By inputSum = By.id("connection-sum");
-    private By continueButton = By.xpath("//button[@class='button button__default ']");
-    private By paymentFrame = By.className("bepaid-iframe");
-    private By closeButton = By.xpath("//svg-icon[@class='header__close-icon']");
-    private By moreInfoLink = By.xpath("//a[contains(text(), 'Подробнее о сервисе')]");
-    private By chatButton = By.className("webim-button-corner");
+    private final By acceptCookiesButton = By.xpath("//button[contains(text(), 'Принять')]");
+    private final By titleOnlinePayment = By.xpath("//h2[contains(text(),'Онлайн пополнение ')]");
+    private final By paymentLogoVisa = By.xpath("//img[@alt='Visa']");
+    private final By inputPhone = By.id("connection-phone");
+    private final By inputSum = By.id("connection-sum");
+    private final By continueButton = By.xpath("//button[@class='button button__default ']");
+    private final By paymentFrame = By.className("bepaid-iframe");
+    private final By closeButton = By.xpath("//svg-icon[@class='header__close-icon']");
+    private final By moreInfoLink = By.xpath("//a[contains(text(), 'Подробнее о сервисе')]");
+    private final By chatButton = By.className("webim-button-corner");
 
     public MTSHomePage(WebDriver driver) {
         this.driver = driver;
