@@ -7,12 +7,12 @@ import org.openqa.selenium.WebElement;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MTSHomePage {
+public class MtsHomePage {
     private final WebDriver driver;
     private final By acceptCookiesButton = By.xpath("//button[contains(text(), 'Принять')]");
 
 
-    public MTSHomePage(WebDriver driver) {
+    public MtsHomePage(WebDriver driver) {
         this.driver = driver;
     }
 
