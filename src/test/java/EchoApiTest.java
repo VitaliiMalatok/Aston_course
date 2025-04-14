@@ -51,7 +51,7 @@ public class EchoApiTest {
         bot.sendMessageToTelegram(message);
     }
 
-    @Test
+    @org.testng.annotations.Test
     @Story("GET method validation")
     @Description("Проверка, что GET-запрос возвращает правильные заголовки и URL")
     public void testGetRequest() {
