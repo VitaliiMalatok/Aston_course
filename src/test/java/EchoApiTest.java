@@ -70,7 +70,6 @@ public class EchoApiTest {
                     .body("headers.x-forwarded-port", equalTo(PORT))
                     .body("url", equalTo(BASE_URI + "/get"))
                     .extract().response();
-
             logResponse(response);
             sendSuccessLogToTelegram();
         } catch (AssertionError | Exception e) {
@@ -100,7 +99,6 @@ public class EchoApiTest {
                     .body("headers.content-type", containsString(CONTENT_TYPE_TEXT_PLAIN))
                     .body("url", containsString(BASE_URI + "/post"))
                     .extract().response();
-
             logResponse(response);
             sendSuccessLogToTelegram();
         } catch (AssertionError | Exception e) {
@@ -130,7 +128,6 @@ public class EchoApiTest {
                     .body("headers.content-type", containsString(CONTENT_TYPE_TEXT_PLAIN))
                     .body("url", containsString(BASE_URI + "/patch"))
                     .extract().response();
-
             logResponse(response);
             sendSuccessLogToTelegram();
         } catch (AssertionError | Exception e) {
@@ -163,7 +160,6 @@ public class EchoApiTest {
                     .body("json", nullValue())
                     .body("url", equalTo(BASE_URI + "/put"))
                     .extract().response();
-
             logResponse(response);
             sendSuccessLogToTelegram();
         } catch (AssertionError | Exception e) {
@@ -193,7 +189,6 @@ public class EchoApiTest {
                     .body("headers.content-type", containsString(CONTENT_TYPE_TEXT_PLAIN))
                     .body("url", containsString(BASE_URI + "/delete"))
                     .extract().response();
-
             logResponse(response);
             sendSuccessLogToTelegram();
         } catch (AssertionError | Exception e) {

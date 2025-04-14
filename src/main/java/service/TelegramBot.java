@@ -20,23 +20,17 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        // Этот метод может быть не нужен для вашего случая
+
     }
 
     public void sendMessageToTelegram(String messageText) {
-        // Создаем объект SendMessage
         SendMessage message = new SendMessage();
         message.setChatId(chatId); // Устанавливаем ID чата
         message.setText(messageText); // Устанавливаем текст сообщения
-
         try {
-            // Отправляем сообщение через execute()
             execute(message);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 }
