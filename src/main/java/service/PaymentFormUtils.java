@@ -23,7 +23,6 @@ public class PaymentFormUtils {
         String actualTextOfC_C_V = paymentFormPage.getTextFromWebElement(paymentFormPage.ccVLabel);
         String actualTextOnPersonName = paymentFormPage.getTextFromWebElement(paymentFormPage.ccNameLabel);
         List<WebElement> actualLogos = paymentFormPage.getLogos();
-
         softAssert.assertEquals(actualAmountOnP, expectedSum, "Сумма в <p> отличается");
         softAssert.assertEquals(actualSumOnButton, expectedSum, "Сумма на <button> отличается");
         softAssert.assertEquals(actualPhoneNumber, expectedPhone, "Номер отличается");

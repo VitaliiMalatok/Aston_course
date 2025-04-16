@@ -11,7 +11,7 @@
 
 ### 📸 Пример уведомления в Telegram:
 
-![Telegram report example](./screenshots/Screenshot (44).png)
+![Telegram report example](screenshots/Screenshot%20(45).png)
 
 ---
 
@@ -23,4 +23,4 @@
 
 ### 📸 Пример Allure-отчёта:
 
-![Allure report example](./screenshots/Screenshot (44).png)
+![Allure report example](screenshots/Screenshot%20(44).png)

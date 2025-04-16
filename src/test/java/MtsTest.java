@@ -3,12 +3,9 @@ import model.MtsHomePage;
 import model.PaymentFormPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 import service.*;
-
-import java.util.List;
 
 @Epic("MTS Online Payment")
 @Feature("Payment Form Tests")
@@ -20,7 +17,6 @@ public class MtsTest extends BaseTest {
     final double SUM_PAY_DOUBLE = 99.99;
     final String SUM_PAY_STRING = String.valueOf(SUM_PAY_DOUBLE);
     final String EMAIL = "wital@gmail.com";
-
     private TelegramBot bot;
     private static final Logger LOGGER = LogManager.getLogger(MtsTest.class);
     private long startTime;
@@ -45,7 +41,6 @@ public class MtsTest extends BaseTest {
         LOGGER.info("=== Старт теста: Проверка плейсхолдеров ===");
         try {
             SoftAssert softAssert = new SoftAssert();
-
             checkPlaceholder(softAssert, "phone", "Номер телефона");
             checkPlaceholder(softAssert, "sum", "Сумма");
             checkPlaceholder(softAssert, "email", "E-mail для отправки чека");
@@ -61,7 +56,6 @@ public class MtsTest extends BaseTest {
 
             softAssert.assertAll();
             LOGGER.info("Все плейсхолдеры успешно прошли проверку");
-
             reportSuccessToTelegram();
         } catch (AssertionError e) {
             LOGGER.error("❌ Тест упал при проверке плейсхолдеров", e);

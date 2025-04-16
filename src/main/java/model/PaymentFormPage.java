@@ -13,10 +13,6 @@ public class PaymentFormPage {
         this.driver = driver;
     }
 
-    public WebElement getElement(By locator) {
-        return driver.findElement(locator);
-    }
-
     private final By phoneInput = By.id("connection-phone");
     private final By sumInput = By.id("connection-sum");
     private final By emailInput = By.id("connection-email");
