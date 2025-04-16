@@ -41,7 +41,7 @@ public class MtsTest extends BaseTest {
         LOGGER.info("=== Старт теста: Проверка плейсхолдеров ===");
         try {
             SoftAssert softAssert = new SoftAssert();
-            checkPlaceholder(softAssert, "phone", "Номер телефона");
+            checkPlaceholder(softAssert, "phoneZZ", "Номер телефона");
             checkPlaceholder(softAssert, "sum", "Сумма");
             checkPlaceholder(softAssert, "email", "E-mail для отправки чека");
             checkPlaceholder(softAssert, "internetPhone", "Номер абонента");

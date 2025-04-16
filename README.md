@@ -13,6 +13,10 @@
 
 ![Telegram report example](screenshots/Screenshot%20(45).png)
 
+### 📸 Пример уведомления в Telegram(тест упал):
+
+![Telegram report example](screenshots/Screenshot%20(46).png)
+
 ---
 
 ## 📊 Allure-отчёты
@@ -24,3 +28,6 @@
 ### 📸 Пример Allure-отчёта:
 
 ![Allure report example](screenshots/Screenshot%20(44).png)
+
+
+
